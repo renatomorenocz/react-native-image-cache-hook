@@ -122,7 +122,7 @@ const path = useImageCache('https://via.placeholder.com/400');
 ```js
 import {CacheManager} from 'react-native-image-cache-hook';
 
-const cache = new CacheManager();
+const cache = new CacheManager('/images/');
 
 cache.clearCache()
 .then(() => { ... })
