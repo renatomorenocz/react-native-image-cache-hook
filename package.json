@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-cache-hook",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "teste release",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -18,7 +18,7 @@
     "url": "git+https://github.com/renatomorenocz/react-native-image-cache-hook.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/renatomorenocz/react-native-image-cache-hook/issues"
   },
