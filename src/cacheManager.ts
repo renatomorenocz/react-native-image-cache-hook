@@ -75,4 +75,8 @@ export default class CacheManager {
   async existsFileCache(imagePath: string): Promise<boolean> {
     return await RNFetchBlob.fs.exists(imagePath);
   }
+
+  async clearCache(): Promise<void> {
+    await RNFetchBlob.fs.unlink(this.cacheDir);
+  }
 }

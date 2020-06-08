@@ -109,12 +109,22 @@ Beginning in Android 6.0 (API level 23), users grant permissions to apps while t
 | uri      |          |        image uri |
 | cacheDir | /images/ | custom cache dir |
 
-### <Image>
-
 ```js
 import useImageCache from 'react-native-image-cache-hook';
 
 const path = useImageCache('https://via.placeholder.com/400');
 
 <Image source={{uri: path}} style={{width: 400, height: 400}} />;
+```
+
+#### Clear cache
+
+```js
+import {CacheManager} from 'react-native-image-cache-hook';
+
+const cache = new CacheManager();
+
+cache.clearCache()
+.then(() => { ... })
+.catch((err) => { ... });
 ```
