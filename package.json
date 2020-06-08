@@ -1,7 +1,7 @@
 {
   "name": "react-native-image-cache-hook",
   "version": "0.0.3",
-  "description": "teste release",
+  "description": "React Native image cache hook for iOS and Android is a simple hook to add cache in file system of images from network",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/renatomorenocz/react-native-image-cache-hook.git"
   },
-  "author": "",
+  "author": "Renato S Moreno",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/renatomorenocz/react-native-image-cache-hook/issues"

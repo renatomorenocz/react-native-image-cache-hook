@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/renatomorenocz/react-native-image-cache-hook.svg?style=svg)](https://circleci.com/gh/renatomorenocz/react-native-image-cache-hook/)
 
-React Native image cache hook for iOS and Android is a simple hook to do cache in file system of images from network.
+React Native image cache hook for iOS and Android is a simple hook to add cache in file system of images from network.
 
 ## Installation
 
