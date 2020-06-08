@@ -33,7 +33,11 @@ export default class CacheManager {
   }
 
   async clearCache(): Promise<void> {
-    return await RNFetchBlob.fs.unlink(this.cacheDir);
+    try {
+      return await RNFetchBlob.fs.unlink(this.cacheDir);
+    } catch (error) {
+      throw error;
+    }
   }
 
   private async getCacheOrDownload(uri: string, hash: string): Promise<void> {
