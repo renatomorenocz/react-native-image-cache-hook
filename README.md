@@ -7,7 +7,7 @@ React Native image cache hook for iOS and Android is a simple hook to add cache 
 ## Installation
 
 ```
-yarn add react-native-expo-image-cache
+yarn add react-native-image-cache-hook
 ```
 
 We use [rn-fetch-blob](https://github.com/joltup/rn-fetch-blob) to handle file system access in this package and it requires an extra step during the installation.
