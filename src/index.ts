@@ -1,5 +1,5 @@
 import useExternalImageCache from './useExternalImageCache';
-import cacheManager from './cacheManager';
+import CacheManager from './cacheManager';
 
 export default useExternalImageCache;
-export {cacheManager};
+export {CacheManager};

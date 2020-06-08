@@ -32,7 +32,11 @@ export default class CacheManager {
     }
   }
 
-  async getCacheOrDownload(uri: string, hash: string): Promise<void> {
+  async clearCache(): Promise<void> {
+    await RNFetchBlob.fs.unlink(this.cacheDir);
+  }
+
+  private async getCacheOrDownload(uri: string, hash: string): Promise<void> {
     const imagePath = this.cacheDir + hash;
 
     if (await this.existsFileCache(imagePath)) {
@@ -62,21 +66,17 @@ export default class CacheManager {
     this.removeItemQueue(hash);
   }
 
-  getQueueByHash(hash: string): ItemQueue | undefined {
+  private getQueueByHash(hash: string): ItemQueue | undefined {
     return CacheManager.downloadQueue.find((item) => item.hash === hash);
   }
 
-  removeItemQueue(hash: string): void {
+  private removeItemQueue(hash: string): void {
     CacheManager.downloadQueue = CacheManager.downloadQueue.filter(
       (item) => item.hash !== hash,
     );
   }
 
-  async existsFileCache(imagePath: string): Promise<boolean> {
+  private async existsFileCache(imagePath: string): Promise<boolean> {
     return await RNFetchBlob.fs.exists(imagePath);
-  }
-
-  async clearCache(): Promise<void> {
-    await RNFetchBlob.fs.unlink(this.cacheDir);
   }
 }
